@@ -1,0 +1,13 @@
+{
+  "name": "goodenough-channels",
+  "description": "Node.js server for the Channels application",
+  "repository": "https://github.com/GoodEnoughSoftware/channels-server/",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": [
+    "channels",
+    "notifications",
+    "group",
+    "team"
+  ],
+  "image": "heroku/nodejs"
+}
