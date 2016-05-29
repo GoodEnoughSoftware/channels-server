@@ -1,6 +1,6 @@
 # Channels Server
 
-![channels icon]()
+![channels icon](blob:https%3A//drive.google.com/897eab90-f189-49d6-af1b-3bf8db9121bc)
 
 ## Overview
 
