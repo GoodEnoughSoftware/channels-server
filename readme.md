@@ -14,9 +14,9 @@ See the preceding section to see more information of the format of each object a
 
 #### User Creation
 
-#### Channels Creation
+#### Channel Creation
 
-In order to create a channel, an authenticated user will send a `PUT` request with the following information:
+In order to create a channel, an authenticated user will send a `PUT` request to the route `www.hosturl.com/channel/` with the following information:
 
 ```javascript
 {
@@ -40,6 +40,19 @@ If a request is made with a channel title that already exists, or without a titl
 {
   "success": false,
   "err": "That channel already exists!" | "A title must be indicated"
+}
+```
+
+#### Getting Channel Information
+
+Within the Channels application, a user may need to view information about a channel. They can do this with a `GET` request to the route `www.hosturl.com/channel/CHANNEL_ID`, where `CHANNEL_ID` is the id of the Channel that you wish to get information from. An object with the following format will be sent back:
+
+```javascript
+{
+  "channel": {
+    null | channel object...
+  },
+  "err": null | err object
 }
 ```
 

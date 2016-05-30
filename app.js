@@ -45,6 +45,7 @@ app.get('/', function(request, response) {
     response.send('Hello world!');
 });
 
+// Create a new channel on the database
 app.put('/channel', function(req, res) {
     
     // Make sure that each required field is present
@@ -74,11 +75,12 @@ app.put('/channel', function(req, res) {
     
 });
 
-app.get('/channel', function(req, res) {
+// Get a channel by the id that was given upon creation
+app.get('/channel/:id', function(req, res) {
     
     var channelModel = mongoose.model('Channel', Channel);
-    channelModel.find({}, function (err, docs) {
-        res.send(docs);
+    channelModel.findOne({_id: req.params.id}, function(err, channel) {
+        res.send({channel: channel, err: err});
     });
     
 });
